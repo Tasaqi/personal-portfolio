@@ -22,18 +22,23 @@ import greentrust from "./green_trust.png";
 import averlon from "./averlon.jpg";
 import devfolio from "./devfolio.png";
 import pba from "./pba_logo.jpeg";
-import ethglobal from "./ethglobal.png";
+import ethglobal from "./ethglobal.jpg";
 import polkadot from "./polkadot.jpeg";
 import lightspeed from "./lightspeed.png";
 import dennisivy from "./dennisivy.png";
 import manipal from "./manipal.png";
 import icon from "./icon.jpg";
-import ethforall from "./ethforall.png";
+import ethforall from "./ethforall.jpg";
 import ethindia from "./ethindia.png";
 import globalAi from "./global-ai.jpeg";
 import khoj from "./khoj.jpg";
 import kosh from "./kosh.png";
 import polkadot_dev_cli from "./polkadot-dev-cli.png";
+import rapidev_logo from "./rapidev_logo.jpg";
+import afiniti from "./afiniti.jpg";
+import emumba from "./emumba.jpg";
+import arbisoft from "./arbisoft.jpg";
+
 
 export {
   menu,
@@ -71,5 +76,9 @@ export {
   globalAi,
   khoj,
   kosh,
-  polkadot_dev_cli
+  polkadot_dev_cli,
+  rapidev_logo,
+  afiniti,
+  emumba,
+  arbisoft
 };
