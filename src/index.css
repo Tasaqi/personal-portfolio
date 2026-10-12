@@ -215,3 +215,55 @@
     @apply w-full fixed top-0 left-0 flex justify-between items-center bg-opacity-80 shadow-lg z-50 backdrop-blur-md border-b border-white/10;
   }
 }
+/* Resume call-to-action in the navbar */
+.resume-cta {
+  position: relative;
+  overflow: hidden;
+  animation: resume-glow 2.4s ease-out infinite;
+}
+
+.resume-cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: resume-shine 3.6s ease-in-out infinite;
+}
+
+@keyframes resume-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(92, 225, 230, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(92, 225, 230, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 225, 230, 0);
+  }
+}
+
+@keyframes resume-shine {
+  0%,
+  60% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resume-cta,
+  .resume-cta::after {
+    animation: none;
+  }
+}

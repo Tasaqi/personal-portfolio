@@ -38,6 +38,7 @@ import rapidev_logo from "./rapidev_logo.jpg";
 import afiniti from "./afiniti.jpg";
 import emumba from "./emumba.jpg";
 import arbisoft from "./arbisoft.jpg";
+import ticketdeck from "./ticketdeck.png";
 
 
 export {
@@ -80,5 +81,6 @@ export {
   rapidev_logo,
   afiniti,
   emumba,
-  arbisoft
+  arbisoft,
+  ticketdeck
 };

@@ -34,6 +34,7 @@ import {
   khoj,
   kosh,
   polkadot_dev_cli,
+  ticketdeck,
 } from "../assets";
 
 import {
@@ -154,8 +155,7 @@ import {
 import { MdRecordVoiceOver, MdWebhook } from "react-icons/md";
 
 
-export const resumeLink =
-  "#";
+export const resumeLink = `${import.meta.env.BASE_URL}Tanveer_Ahmad_Resume.pdf`;
 export const repoLink = "https://github.com/Tasaqi";
 
 export const callToAction = "https://www.linkedin.com/in/tanveer-ahmed-bb8694164/";
@@ -207,47 +207,60 @@ export const educationList = [
 // Add your past achievments here for example - rankings in hackathons/events
 
 export const achievements = [
-    {
+  {
     id: "a-1",
+    icon: ticketdeck,
+    event: "TicketDeck",
+    position: "Full-stack Engineer (Consultant)",
+    content1: "Built React 18 + TypeScript SPA: admin, attendee, scanner & platform portals.",
+    content2: "Built FastAPI + Celery backend on PostgreSQL with Stripe & Postmark.",
+    content3: "Shipped end to end in 2 months on Azure Container Apps.",
+    article: "",
+    project: "https://ticket-deck.com",
+    youtube: "",
+    github: ""
+  },
+  {
+    id: "a-2",
     icon: ethindia,
     event: "Active Digital",
     position: "Data Engineer (Consultant)",
     content1: "Built data pipelines using Azure Data Factory & Functions.",
     content2: "Used Azure Functions, Logic Apps, and configured VMs & firewalls.",
     content3: "Long-term engagement (2+ years).",
-    article: "https://www.active.us",
+    article: "",
     project: "https://www.active.us",
     youtube: "",
     github: ""
   },
-    {
-    id: "a-4",
+  {
+    id: "a-3",
     icon: ethglobal,
     event: "VistaBee",
     position: "Backend Engineer",
     content1: "Ongoing bug fixes, feature additions, and weekly AWS deployments.",
     content2: "Added Vimeo video integration & ran SQL-based data migrations.",
     content3: "",
-    article: "https://vistabee.com",
+    article: "",
     project: "https://vistabee.com",
     youtube: "",
     github: ""
   },
   {
-    id: "a-2",
+    id: "a-4",
     icon: ethforall, // replace with actual imported icon
     event: "Kifwat immo",
     position: "Web Scraping & API Development",
     content1: "Built APIs to scrape ads from e-commerce websites via the KI app.",
     content2: "Implemented data standardization & real-time streaming with Kafka.",
     content3: "Duration: June 2021 – Jan 2022",
-    article: "https://www.ki.immo",
+    article: "",
     project: "https://www.ki.immo",
     youtube: "",
     github: ""
   },
   {
-    id: "a-3",
+    id: "a-5",
     icon: polkadot,
     event: "Transparagent",
     position: "Full-stack Developer",
@@ -560,6 +573,60 @@ export const claudeBanner = {
     { id: "cc-7", icon: BsCheck2Circle, name: "Code Review & Tests" },
     { id: "cc-8", icon: BsChatSquareText, name: "Prompt Engineering" },
   ],
+  caseStudy: {
+    title: "TicketDeck",
+    link: "https://ticket-deck.com",
+    duration: "2 months",
+    summary:
+      "Scoped and shipped an end-to-end event ticketing platform solo: four portals, payments, background jobs, CI/CD and cloud infra, from first commit to production.",
+    workflow:
+      "Driven by Claude Code with 30 repo-specific skills, CLAUDE.md conventions per repo, and custom subagents for visual QA and security review.",
+    scope: [
+      {
+        id: "cs-1",
+        icon: SiReact,
+        title: "Frontend",
+        items: [
+          "React 18 + TypeScript + Vite",
+          "Tailwind + shadcn/ui design system",
+          "Admin, attendee, scanner & platform portals",
+          "Stripe checkout & QR tickets",
+        ],
+      },
+      {
+        id: "cs-2",
+        icon: SiFastapi,
+        title: "Backend",
+        items: [
+          "FastAPI + async SQLAlchemy",
+          "PostgreSQL 16 + Alembic migrations",
+          "Celery + Redis background jobs",
+          "Stripe payments & Postmark email",
+        ],
+      },
+      {
+        id: "cs-3",
+        icon: SiDocker,
+        title: "DevOps",
+        items: [
+          "Docker on Azure Container Apps",
+          "Azure Static Web Apps frontend",
+          "GitHub Actions CI/CD",
+          "Azure Blob Storage & Cloudflare DNS",
+        ],
+      },
+      {
+        id: "cs-4",
+        icon: BsCheck2Circle,
+        title: "Quality",
+        items: [
+          "Vitest + RTL, Playwright e2e",
+          "pytest unit & integration suites",
+          "Bandit + pip-audit security CI",
+        ],
+      },
+    ],
+  },
 };
 
 // Add your current/past professional work experience here
