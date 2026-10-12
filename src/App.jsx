@@ -1,4 +1,14 @@
-import { Navbar, Hero, Highlights, CaseStudy, Projects, Experience, Consultancy } from "./components";
+import {
+  Navbar,
+  Hero,
+  Highlights,
+  CaseStudy,
+  Projects,
+  Experience,
+  Consultancy,
+  Skills,
+  Contact,
+} from "./components";
 
 const App = () => (
   <div className="min-h-screen bg-canvas">
@@ -10,7 +20,9 @@ const App = () => (
       <Projects />
       <Experience />
       <Consultancy />
+      <Skills />
     </main>
+    <Contact />
   </div>
 );
 
