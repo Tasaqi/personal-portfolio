@@ -161,35 +161,23 @@ export const repoLink = "https://github.com/Tasaqi";
 export const callToAction = "https://www.linkedin.com/in/tanveer-ahmed-bb8694164/";
 
 export const navLinks = [
-  {
-    id: "skills",
-    title: "Skills & Experience",
-  },
-  {
-    id: "education",
-    title: "Education",
-  },
-  {
-    id: "achievements",
-    title: "Consultancy Experience",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  // {
-  //   id: "openSource",
-  //   title: "Open Source",
-  // },
-  // {
-  //   id: "extraCurricular",
-  //   title: "Extra Curricular",
-  // },
-  {
-    id: "contactMe",
-    title: "Contact Me",
-  },
+  { id: "work", title: "Work" },
+  { id: "experience", title: "Experience" },
+  { id: "consultancy", title: "Consultancy" },
+  { id: "skills", title: "Skills" },
+  { id: "contactMe", title: "Contact" },
 ];
+
+// Short client-facing copy used by the hero and contact sections
+export const hero = {
+  badge: "Open to consulting & freelance work",
+  cta: "Let's work together",
+};
+
+export const contactCta = {
+  heading: "Have a project in mind?",
+  line: "Backend, AI integration or data work. Let's talk.",
+};
 
 // Add your past academic experiences here
 export const educationList = [
@@ -981,26 +969,25 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: AiFillLinkedin,
+    label: "LinkedIn",
     link: "https://www.linkedin.com/in/tanveer-ahmed-bb8694164/",
   },
   {
     id: "social-media-2",
     icon: AiFillGithub,
+    label: "GitHub",
     link: "https://www.github.com/tasaqi",
   },
   {
     id: "social-media-3",
     icon: AiFillMail,
+    label: "Email",
     link: "mailto:10vir72@gmail.com",
-  },
-  {
-    id: "social-media-4",
-    icon: AiOutlineTwitter,
-    link: "#",
   },
   {
     id: "social-media-5",
     icon: SiFiverr,
+    label: "Fiverr",
     link: "https://www.fiverr.com/tasaqi_pro",
   },
 ];
@@ -1020,4 +1007,27 @@ export const itemsToFetch = 20;
 
 // Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format.
 export const includedRepos = [
+];
+
+// Headline numbers shown under the hero; counts come from the data above
+export const highlights = [
+  { id: "h-1", value: "7", suffix: "+", label: "years building backends" },
+  {
+    id: "h-2",
+    value: String(experiences.length),
+    suffix: "",
+    label: "companies, latest as Principal Engineer",
+  },
+  {
+    id: "h-3",
+    value: String(achievements.length),
+    suffix: "",
+    label: "consulting clients",
+  },
+  {
+    id: "h-4",
+    value: "200",
+    suffix: "+",
+    label: "technical interviews, 10+ engineers mentored",
+  },
 ];

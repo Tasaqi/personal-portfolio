@@ -39,6 +39,7 @@ import afiniti from "./afiniti.jpg";
 import emumba from "./emumba.jpg";
 import arbisoft from "./arbisoft.jpg";
 import ticketdeck from "./ticketdeck.png";
+import logoMark from "./logo-mark.png";
 
 
 export {
@@ -82,5 +83,6 @@ export {
   afiniti,
   emumba,
   arbisoft,
-  ticketdeck
+  ticketdeck,
+  logoMark
 };
