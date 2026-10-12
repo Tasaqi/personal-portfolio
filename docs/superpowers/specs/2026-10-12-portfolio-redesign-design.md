@@ -67,7 +67,7 @@ Defined once as Tailwind theme tokens in `tailwind.config.cjs`:
    (name in brand blue), the existing `aboutMe.intro`, buttons "Let's work together"
    (scrolls to Contact) and Resume. Right side: large round profile photo with white
    ring and soft brand blue shadow. Phone: photo above text.
-3. **Highlights strip.** Four stat cards from existing facts: 7+ years building
+3. **Highlights strip.** Four stat cards from existing facts: 6+ years building
    backends; N companies, latest as Principal Engineer; N consulting clients (both counted from
    the data, currently 4 and 5); 200+
    technical interviews, 10+ engineers mentored.

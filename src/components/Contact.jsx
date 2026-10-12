@@ -27,7 +27,7 @@ const Contact = () => {
                 {...linkProps(social.link)}
                 className={`inline-flex items-center gap-2 rounded-btn px-5 py-3 text-sm font-semibold transition-colors ${
                   index === 0
-                    ? "bg-brand-600 text-white hover:bg-brand-500"
+                    ? "bg-brand-600 text-white hover:bg-brand-700"
                     : "border border-stone-700 text-white hover:border-stone-400"
                 }`}
               >
@@ -39,7 +39,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-14 flex flex-col gap-6 border-t border-stone-800 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-stone-500">
+          <p className="text-sm text-stone-400">
             © {new Date().getFullYear()} {aboutMe.name}
           </p>
           <div className="flex items-center gap-5">

@@ -1011,7 +1011,7 @@ export const includedRepos = [
 
 // Headline numbers shown under the hero; counts come from the data above
 export const highlights = [
-  { id: "h-1", value: "7", suffix: "+", label: "years building backends" },
+  { id: "h-1", value: "6", suffix: "+", label: "years building backends" },
   {
     id: "h-2",
     value: String(experiences.length),
