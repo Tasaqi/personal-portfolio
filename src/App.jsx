@@ -1,4 +1,4 @@
-import { Navbar, Hero, Highlights, CaseStudy, Projects } from "./components";
+import { Navbar, Hero, Highlights, CaseStudy, Projects, Experience, Consultancy } from "./components";
 
 const App = () => (
   <div className="min-h-screen bg-canvas">
@@ -8,6 +8,8 @@ const App = () => (
       <Highlights />
       <CaseStudy />
       <Projects />
+      <Experience />
+      <Consultancy />
     </main>
   </div>
 );
