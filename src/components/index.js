@@ -13,6 +13,7 @@ import Stats from "./Stats";
 import Loading from "./Loading";
 import BlogPosts from "./BlogPosts";
 import Achievements from "./Achievements";
+import ClaudeBanner from "./ClaudeBanner";
 
 
 export {
@@ -29,4 +30,5 @@ export {
     Loading,
     BlogPosts,
     Achievements,
+    ClaudeBanner,
 };

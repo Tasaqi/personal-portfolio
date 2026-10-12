@@ -119,7 +119,14 @@ import {
   SiGnubash,
   SiRedis,
   SiFiverr,
-  
+  SiSqlalchemy,
+  SiPydantic,
+  SiGooglegemini,
+  SiTensorflow,
+  SiKeras,
+  SiZapier,
+  SiBamboo,
+  SiSlack,
 } from "react-icons/si";
 
 import { FaHardHat, FaRust } from "react-icons/fa";
@@ -133,7 +140,18 @@ import { VscAccount, VscAzure, VscAzureDevops } from "react-icons/vsc";
 import { BiLogoVisualStudio} from "react-icons/bi";
 import { RiFediverseFill } from "react-icons/ri";
 import { GiArtilleryShell } from "react-icons/gi";
-import { BsDatabaseFillLock } from "react-icons/bs";
+import {
+  BsDatabaseFillLock,
+  BsDatabaseGear,
+  BsListTask,
+  BsSlashSquare,
+  BsLightningCharge,
+  BsDiagram3,
+  BsCheck2Circle,
+  BsChatSquareText,
+  BsPlug,
+} from "react-icons/bs";
+import { MdRecordVoiceOver, MdWebhook } from "react-icons/md";
 
 
 export const resumeLink =
@@ -155,10 +173,10 @@ export const navLinks = [
     id: "achievements",
     title: "Consultancy Experience",
   },
-  // {
-  //   id: "projects",
-  //   title: "Projects",
-  // },
+  {
+    id: "projects",
+    title: "Projects",
+  },
   // {
   //   id: "openSource",
   //   title: "Open Source",
@@ -180,7 +198,7 @@ export const educationList = [
     icon: nitk,
     title: "COMSATS University Islamabad",
     degree: "Bachelor's in Software Engineering",
-    duration: "September  2015 - May 2019",
+    duration: "Sep 2015 - May 2019",
     content1: "Major: Software Engineering",
     content2: "Minor: Artificial Intelligence, Data Science	",
   },
@@ -454,86 +472,95 @@ export const skills = [
     items: [
       { id: "pl-1", icon: SiPython, name: "Python" },
       { id: "pl-2", icon: AiOutlineConsoleSql, name: "SQL" },
-      { id: "pl-3", icon: SiJavascript, name: "JavaScript" },
-      { id: "pl-4", icon: AiFillHtml5, name: "HTML" },
-      { id: "pl-5", icon: DiCss3, name: "CSS" },
       { id: "pl-6", icon: SiGnubash, name: "Bash/Shell" },
     ],
   },
   {
     title: "Frameworks & Libraries",
     items: [
+      { id: "fw-4", icon: SiFastapi, name: "FastAPI" },
       { id: "fw-1", icon: SiDjango, name: "Django / DRF" },
       { id: "fw-3", icon: SiFlask, name: "Flask" },
-      { id: "fw-4", icon: SiFastapi, name: "FastAPI" },
-      { id: "fw-5", icon: SiBootstrap, name: "Bootstrap" },
+      { id: "fw-12", icon: SiSqlalchemy, name: "SQLAlchemy" },
+      { id: "fw-13", icon: BsDatabaseGear, name: "Alembic" },
+      { id: "fw-14", icon: SiPydantic, name: "Pydantic" },
       { id: "fw-6", icon: SiPandas, name: "Pandas" },
-      { id: "fw-8", icon: SiSelenium, name: "Selenium" },
       { id: "fw-9", icon: SiScrapy, name: "Scrapy" },
-      { id: "fw-10", icon: SiPytest, name: "Pytest" },
-      { id: "fw-11", icon: SiStripe, name: "dj-stripe" },
+      { id: "fw-8", icon: SiSelenium, name: "Selenium" },
     ],
   },
   {
-    title: "Data Engineering, Streaming & Task Queues",
+    title: "AI & LLM Integration",
     items: [
+      { id: "ai-1", icon: SiOpenai, name: "OpenAI / Whisper" },
+      { id: "ai-2", icon: SiGooglegemini, name: "Gemini API" },
+      { id: "ai-3", icon: MdRecordVoiceOver, name: "LiveKit" },
+    ],
+  },
+  {
+    title: "Databases, Data Pipelines & Queues",
+    items: [
+      { id: "db-1", icon: SiPostgresql, name: "PostgreSQL" },
+      { id: "db-2", icon: SiMysql, name: "MySQL" },
       { id: "de-1", icon: SiApacheairflow, name: "Apache Airflow" },
       { id: "de-2", icon: SiCelery, name: "Celery" },
+      { id: "de-6", icon: BsListTask, name: "TaskIQ" },
       { id: "de-3", icon: SiApachekafka, name: "Kafka" },
       { id: "de-4", icon: SiRabbitmq, name: "RabbitMQ" },
       { id: "de-5", icon: SiRedis, name: "Redis" },
     ],
   },
   {
-    title: "Cloud Platforms & Services",
+    title: "Cloud Platforms",
     items: [
+      { id: "cp-15", icon: SiGooglecloud, name: "Google Cloud Platform" },
       { id: "cp-1", icon: VscAzure, name: "Azure Cloud" },
       { id: "cp-2", icon: VscAccount, name: "Azure Data Factory" },
-      { id: "cp-8", icon: VscAzureDevops, name: "Azure Pipelines" },
-      { id: "cp-9", icon: SiVirtualbox, name: "VPC" },
-      { id: "cp-10", icon: SiAwslambda, name: "AWS Lambda" },
-      { id: "cp-11", icon: SiAmazons3, name: "AWS S3" },
       { id: "cp-12", icon: SiAmazonec2, name: "AWS EC2" },
+      { id: "cp-11", icon: SiAmazons3, name: "AWS S3" },
       { id: "cp-13", icon: SiAmazonrds, name: "AWS RDS" },
-      { id: "cp-14", icon: SiGooglecloud, name: "Google Compute Engine" },
     ],
   },
   {
-    title: "Database Systems",
-    items: [
-      { id: "db-1", icon: SiPostgresql, name: "PostgreSQL" },
-      { id: "db-2", icon: SiMysql, name: "MySQL" },
-      { id: "db-3", icon: SiMongodb, name: "MongoDB" },
-      { id: "db-4", icon: SiElasticsearch, name: "Elasticsearch" },
-    ],
-  },
-  {
-    title: "DevOps, Tools & Project Management",
+    title: "DevOps, Testing & Tools",
     items: [
       { id: "dt-1", icon: SiDocker, name: "Docker" },
       { id: "dt-2", icon: SiGit, name: "Git" },
       { id: "dt-3", icon: SiGitlab, name: "GitLab" },
-      { id: "dt-4", icon: AiFillGithub, name: "GitHub" },
-      { id: "dt-5", icon: SiBitbucket, name: "Bitbucket" },
-      { id: "dt-6", icon: SiLinux, name: "Linux" },
-      { id: "dt-7", icon: SiJira, name: "JIRA" },
       { id: "dt-9", icon: VscAzureDevops, name: "Azure DevOps" },
+      { id: "dt-10", icon: SiBamboo, name: "Atlassian Bamboo" },
+      { id: "fw-10", icon: SiPytest, name: "Pytest" },
+      { id: "dt-7", icon: SiJira, name: "JIRA" },
+      { id: "dt-6", icon: SiLinux, name: "Linux" },
+      { id: "ot-6", icon: SiPostman, name: "Postman" },
     ],
   },
   {
-    title: "Other Tools & Platforms",
+    title: "Automation & Integrations",
     items: [
-      { id: "ot-1", icon: SiWordpress, name: "WordPress" },
-      { id: "ot-2", icon: SiAdobephotoshop, name: "Photoshop" },
-      { id: "ot-3", icon: SiFigma, name: "Figma" },
       { id: "ot-4", icon: SiPowers, name: "Power Automate" },
-      { id: "ot-5", icon: SiMiro, name: "Miro" },
-      { id: "ot-6", icon: SiPostman, name: "Postman" },
-      { id: "ot-7", icon: SiSwagger, name: "Swagger" },
+      { id: "ot-8", icon: SiZapier, name: "Zapier" },
+      { id: "ot-9", icon: SiSlack, name: "Slack API" },
     ],
   },
 ];
 
+// Highlighted AI-assisted engineering skills shown in the Claude Code banner
+export const claudeBanner = {
+  eyebrow: "AI-Assisted Engineering",
+  content:
+    "I use Claude Code daily with custom skills, slash commands, and hooks to speed up development, automate code review, and generate tests across repo-specific workflows.",
+  skills: [
+    { id: "cc-1", icon: SiClaude, name: "Claude Code" },
+    { id: "cc-2", icon: BsLightningCharge, name: "Custom Skills" },
+    { id: "cc-3", icon: MdWebhook, name: "Hooks" },
+    { id: "cc-4", icon: BsSlashSquare, name: "Slash Commands" },
+    { id: "cc-5", icon: BsPlug, name: "MCP Servers" },
+    { id: "cc-6", icon: BsDiagram3, name: "Subagents" },
+    { id: "cc-7", icon: BsCheck2Circle, name: "Code Review & Tests" },
+    { id: "cc-8", icon: BsChatSquareText, name: "Prompt Engineering" },
+  ],
+};
 
 // Add your current/past professional work experience here
 export const experiences = [
@@ -543,29 +570,27 @@ export const experiences = [
     link: "https://arbisoft.com/",
     positions: [
       {
-        title: "Senior Software Engineer",
-        duration: "Dec 2023 - Present",
+        title: "Principal Software Engineer",
+        duration: "May 2023 - Present",
         content: [
           {
-            text: "Developed solutions to enhance AI model performance, integrating Gemini APIs and designing effective prompts. Built RESTful APIs with FastAPI, handled data processing with Pandas, and deployed services on GCP. Supported team growth by onboarding and mentoring new members.",
+            text: "Worked on multiple projects focused on building automation systems and AI-driven solutions to improve product quality, engineering efficiency, and platform intelligence. Contributed to backend development, AI integration, testing automation, and system reliability across different teams.",
             link: "",
           },
           {
-            text: "Skills: Python · FastAPI · REST APIs · Google Cloud Platform (GCP) · Azure DevOps Services · Gemini API Integration",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Senior Software Engineer",
-        duration: "Aug 2023 - Dec 2023",
-        content: [
-          {
-            text: "Built internal tools and automation solutions to enhance QA efficiency and developer workflows. Developed a Quality Dashboard, automated release note generation, Slack alerts, and JIRA ticket creation for regression tests. Maintained a Pytest pipeline on Azure DevOps for seamless end-to-end testing",
+            text: "Developed an AI recruitment platform with candidate matching, LiveKit-based AI voice interviews, and OpenAI evaluation reports. Built FastAPI-based REST services for backend and AI workflows, async background workers (TaskIQ + Redis), and API observability with request logging, redaction, and scheduled cleanup.",
             link: "",
           },
           {
-            text: "Skills: Python · REST APIs · Jira · Atlassian Bamboo · Microsoft Azure · Azure DevOps Services · Slack API",
+            text: "Integrated Gemini APIs into an AI-driven document intelligence architecture. Built an in-house automation platform to streamline QA workflows, a Quality Dashboard for real-time test and quality metrics, and automated release notes, Slack notifications, and JIRA ticket creation for regression testing. Designed and maintained a Pytest + Azure DevOps CI/CD test automation framework.",
+            link: "",
+          },
+          {
+            text: "Used Claude Code with custom skills, commands, and hooks to speed up development, code review, and test generation. Supported onboarding and mentoring of new engineers.",
+            link: "",
+          },
+          {
+            text: "Skills: Python · FastAPI · SQLAlchemy · PostgreSQL · Redis · TaskIQ · OpenAI · Gemini API · LiveKit · GCP · Azure DevOps · Pytest · Claude Code",
             link: "",
           },
         ],
@@ -579,14 +604,18 @@ export const experiences = [
     positions: [
       {
         title: "Senior Software Engineer",
-        duration: "Mar 2022 - Aug 2023",
+        duration: "Mar 2022 - Apr 2023",
         content: [
           {
-            text: "Built scalable backend services using Python and Django REST Framework, with seamless integration of crypto wallets and third-party APIs via Airflow for automated data ingestion. Maintained detailed API documentation to support frontend collaboration. Collaborated closely with cross-functional teams to drive feature delivery and maintain high development velocity. Managed codebase and database operations using GitLab and PostgreSQL. Conducted code reviews and contributed to architecture and feature design. Deployed secure and scalable services on AWS production environments.",
+            text: "Worked on a SaaS-based platform for cryptocurrency tax automation and real-time portfolio analytics. Built and maintained scalable backend systems using Python and Django REST Framework, and integrated crypto wallets and third-party APIs for automated data ingestion using Airflow. Managed source control with GitLab and database operations with PostgreSQL. Conducted code reviews, contributed to system design and new feature development, and deployed backend services on AWS for scalability and security.",
             link: "",
           },
           {
-            text: "Skills: PostgreSQL · Airflow · Django REST Framework · Gitlab · Python · Object-Relational Mapping (ORM) · Amazon Web Services (AWS)",
+            text: "Key achievements: enabled automated crypto data ingestion for accurate tax reporting, improved system scalability and reliability, and streamlined developer collaboration with well-structured APIs and documentation.",
+            link: "",
+          },
+          {
+            text: "Skills: Python · Django REST Framework · PostgreSQL · Airflow · GitLab · Amazon Web Services (AWS)",
             link: "",
           },
         ],
@@ -600,14 +629,18 @@ export const experiences = [
     positions: [
       {
         title: "Software Engineer",
-        duration: "Mar 2021 - Apr 2022",
+        duration: "Apr 2021 - Jan 2022",
         content: [
           {
-            text: "Developed RESTful APIs for the Text-to-Speech (TTS) engine using FastAPI and integrated pre-trained machine learning models into the server architecture. Maintained and enhanced the TTS engine, resolving bugs and ensuring high availability. Promoted clean, maintainable code by adhering to PEP8 standards. Actively participated in daily standups and team meetings, while mentoring and guiding junior team members to ensure knowledge transfer and consistent code quality.",
+            text: "Worked on a Text-to-Speech (TTS) engine for the Mega product, enabling natural-sounding speech synthesis across multiple voices, languages, and formats. Developed REST APIs for the TTS engine using FastAPI and integrated trained speech synthesis models with backend services. Maintained and optimized the existing engine, mentored junior team members, and kept code clean and standardized following PEP 8.",
             link: "",
           },
           {
-            text: "Skills: PostgreSQL · Git · FastAPI · Django · Python (Programming Language) · Object-Relational Mapping (ORM).",
+            text: "Key achievements: delivered a scalable TTS solution supporting multiple languages and voice variants, and improved system reliability through continuous maintenance and optimization.",
+            link: "",
+          },
+          {
+            text: "Skills: Python · FastAPI · Django · PostgreSQL · Git",
             link: "",
           },
         ],
@@ -615,35 +648,24 @@ export const experiences = [
     ],
   },
   {
-    organisation: "Rapidev",
+    organisation: "Rapidev DMCC",
     logo: rapidev_logo,
     link: "https://www.rapidev.com/about",
     positions: [
       {
-        title: "Team Lead",
-        duration: "Apr 2020 - Apr 2021",
-        content: [
-
-          {
-            text: "Led the architecture and implementation of a scalable, distributed web crawling system for large-scale data ingestion. Acted as Theme Owner, translating business requirements into actionable epics and user stories. Managed task assignments, conducted thorough code reviews in Bitbucket, and ensured high-quality deliveries. Facilitated Agile ceremonies including daily standups, sprint planning, and retrospectives. Mentored over 10 junior engineers, established technical SOPs, and conducted 200+ interviews to expand the Python/Django development team.",
-            link: "",
-          },
-          {
-            text: "Leadership Tools: Jira, Bitbucket, Agile/Scrum, Mentoring, Interviewing, Documentation",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Full Stack Developer",
-        duration: "Nov 2019 - Apr 2020",
+        title: "Team Lead / Full-stack Developer",
+        duration: "Nov 2019 - Apr 2021",
         content: [
           {
-            text: "Developed scalable backend microservices using Flask, Celery, and RabbitMQ. Built intelligent web crawlers with Scrapy and Selenium for automated data extraction and normalization. Engineered anti-scraping bypass strategies and reverse-engineered complex site structures to ensure data availability. Designed a crawler management dashboard with Django REST Framework for asynchronous task control. Delivered clean, testable backend APIs and robust database integrations for production use.",
+            text: "Led and contributed to the development of scalable web automation and data platforms. Designed and implemented a distributed web crawling architecture for large-scale data ingestion, developed microservices using Flask, Celery, and RabbitMQ, and built web crawlers using Scrapy and Selenium. Implemented anti-scraping and reverse engineering techniques for complex data sources, and created backend APIs and a crawler management dashboard using Django REST Framework.",
             link: "",
           },
           {
-            text: "Tech Stack: Python, Django, Flask, Django REST Framework, Celery, RabbitMQ, Scrapy, Selenium, PostgreSQL.",
+            text: "Led Agile processes including sprint planning, standups, and retrospectives. Managed task allocation and code reviews, mentored 10+ engineers, established onboarding SOPs, and conducted 200+ technical interviews to scale the engineering team.",
+            link: "",
+          },
+          {
+            text: "Skills: Python · Django REST Framework · Flask · Celery · RabbitMQ · Scrapy · Selenium · PostgreSQL · Agile/Scrum",
             link: "",
           },
         ],
@@ -654,319 +676,112 @@ export const experiences = [
 
 // Add information about all the projects to be listed out in your portfolio
 export const projects = [
-  // {
-  //   id: "project-1",
-  //   title: "Khoj",
-  //   github: "https://github.com/marcdhi/Khoj",
-  //   link: "https://devfolio.co/projects/khoj-3336",
-  //   image: khoj,
-  //   content:
-  //     "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiSolidity,
-  //       name: "Solidity",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTypescript,
-  //       name: "Typescript",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiReact,
-  //       name: "React.js",
-  //     },
-  //     {
-  //       id: "icon-4",
-  //       icon: SiTailwindcss,
-  //       name: "TailwindCSS",
-  //     },
-  //     {
-  //       id: "icon-5",
-  //       icon: SiClaude,
-  //       name: "Claude Sonnet",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-2",
-  //   title: "Kosh SDK",
-  //   github: "https://github.com/mittal-parth/kosh-sdk",
-  //   link: "https://ethglobal.com/showcase/kosh-hk3mp",
-  //   image: kosh,
-  //   content:
-  //     "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
-  //   stack: [
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTypescript,
-  //       name: "Typescript",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTailwindcss,
-  //       name: "TailwindCSS",
-  //     },
-  //     {
-  //       id: "pl-2",
-  //       icon: SiPython,
-  //       name: "Python",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-3",
-  //   title: "Polkadot Dev CLI",
-  //   github: "https://github.com/mittal-parth/polkadot-dev-cli",
-  //   link: "https://crates.io/crates/polkadot-dev-cli",
-  //   image: polkadot_dev_cli,
-  //   content:
-  //     "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: FaRust,
-  //       name: "Rust",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-4",
-  //   title: "Comicify.ai",
-  //   github: "https://github.com/ayush4345/Comicify.ai",
-  //   link: "https://devfolio.co/projects/comicifyai-97a6",
-  //   image: comicify_ai,
-  //   content:
-  //     "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiReact,
-  //       name: "React",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTailwindcss,
-  //       name: "TailwindCSS",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiOpenai,
-  //       name: "OpenAI",
-  //     },
-  //     {
-  //       id: "icon-4",
-  //       icon: SiGooglecloud,
-  //       name: "Google Cloud Platform",
-  //     },
-  //     {
-  //       id: "icon-5",
-  //       icon: SiFlask,
-  //       name: "Flask",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-5",
-  //   title: "Non-Teaching Recruitment Portal, NITK",
-  //   github: "",
-  //   link: "http://recruitment.nitk.ac.in/",
-  //   image: recruitment,
-  //   content:
-  //     "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiRubyonrails,
-  //       name: "Ruby on Rails",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTailwindcss,
-  //       name: "TailwindCSS",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiJquery,
-  //       name: "jQuery",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-6",
-  //   title: "GreenTrust",
-  //   github: "https://github.com/mittal-parth/GreenTrust",
-  //   link: "https://green-trust-fantom.netlify.app/",
-  //   image: greentrust,
-  //   content:
-  //     "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiReact,
-  //       name: "React",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTailwindcss,
-  //       name: "TailwindCSS",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiNextdotjs,
-  //       name: "Next.js",
-  //     },
-  //     {
-  //       id: "icon-4",
-  //       icon: SiIpfs,
-  //       name: "IPFS",
-  //     },
-  //     {
-  //       id: "icon-5",
-  //       icon: SiSolidity,
-  //       name: "Solidity",
-  //     },
-  //     {
-  //       id: "icon-6",
-  //       icon: IoIosNotificationsOutline,
-  //       name: "Push Protocol",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-7",
-  //   title: "ChargeSwap",
-  //   github: "https://github.com/CommanderAstern/ChargeSwap",
-  //   link: "https://devfolio.co/projects/chargeswap-3527",
-  //   image: chargeswap,
-  //   content:
-  //     "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiReact,
-  //       name: "React",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiWeb3Dotjs,
-  //       name: "Web3.js",
-  //     },
-  //     {
-  //       id: "icon-4",
-  //       icon: SiSolidity,
-  //       name: "Solidity",
-  //     },
-  //     {
-  //       id: "icon-5",
-  //       icon: FaHardHat,
-  //       name: "HardHat",
-  //     },
-  //     {
-  //       id: "icon-6",
-  //       icon: SiIpfs,
-  //       name: "IPFS",
-  //     },
-  //     {
-  //       id: "icon-7",
-  //       icon: SiArduino,
-  //       name: "Arduino",
-  //     },
-  //     {
-  //       id: "icon-8",
-  //       icon: IoIosNotificationsOutline,
-  //       name: "Push Protocol",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-8",
-  //   title: "Samsotech Table Management System",
-  //   github: "",
-  //   link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
-  //   image: placeicon,
-  //   content:
-  //     "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiDotnet,
-  //       name: "Dot Net Core MVC 6",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiBootstrap,
-  //       name: "Bootstrap",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: DiMsqlServer,
-  //       name: "MS Sql Server",
-  //     },
-  //     {
-  //       id: "icon-4",
-  //       icon: SiJquery,
-  //       name: "jQuery",
-  //     },
-  //     {
-  //       id: "icon-5",
-  //       icon: SiTwilio,
-  //       name: "Twillio",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-9",
-  //   title: "Career Development Centre, NITK Website",
-  //   github: "",
-  //   link: "http://cdc.nitk.ac.in/",
-  //   image: cdc,
-  //   content: "The official website of CDC, NITK with a custom built CMS.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiRubyonrails,
-  //       name: "Ruby on Rails",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiBootstrap,
-  //       name: "Bootstrap",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: SiJavascript,
-  //       name: "JavaScript",
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: "project-10",
-  //   title: "Portfolio",
-  //   github: "https://github.com/mittal-parth/personal-portfolio",
-  //   link: "https://parthmittal.netlify.app/",
-  //   image: portfolio,
-  //   content: "Open source developer portfolio template with modern UI/UX. 125+ stars on GitHub.",
-  //   stack: [
-  //     {
-  //       id: "icon-1",
-  //       icon: SiReact,
-  //       name: "React",
-  //     },
-  //     {
-  //       id: "icon-2",
-  //       icon: SiTailwindcss,
-  //       name: "Tailwind CSS",
-  //     },
-  //     {
-  //       id: "icon-3",
-  //       icon: AiFillHtml5,
-  //       name: "HTML",
-  //     },
-  //   ],
-  // },
+  {
+    id: "project-1",
+    title: "BenchPrep",
+    github: "",
+    link: "",
+    image: arbisoft,
+    content:
+      "AI recruitment platform with AI voice interviews (Apr 2026 - Present). Built REST APIs for candidates, roles, interviews, and dashboards using FastAPI, SQLAlchemy 2.0 async, and Pydantic V2. Developed the LiveKit AI voice interview agent with turn-taking, silence handling, and error fallbacks, and an evaluation pipeline using OpenAI and Whisper for transcription, speech metrics, and AI-generated reports. Built API request logging with async queuing, batched inserts, data redaction, and a scheduled TaskIQ cleanup job, with Alembic migrations and pytest coverage for all changes.",
+    stack: [
+      { id: "icon-1", icon: SiPython, name: "Python" },
+      { id: "icon-2", icon: SiFastapi, name: "FastAPI" },
+      { id: "icon-3", icon: SiSqlalchemy, name: "SQLAlchemy" },
+      { id: "icon-4", icon: BsDatabaseGear, name: "Alembic" },
+      { id: "icon-5", icon: SiPydantic, name: "Pydantic" },
+      { id: "icon-6", icon: SiPostgresql, name: "PostgreSQL" },
+      { id: "icon-7", icon: SiRedis, name: "Redis" },
+      { id: "icon-8", icon: BsListTask, name: "TaskIQ" },
+      { id: "icon-9", icon: SiOpenai, name: "OpenAI" },
+      { id: "icon-10", icon: MdRecordVoiceOver, name: "LiveKit" },
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Docugami",
+    github: "",
+    link: "",
+    image: arbisoft,
+    content:
+      "AI-based solutions for document processing (Dec 2023 - Apr 2026). Integrated Gemini APIs into the solution architecture, designed and refined prompts for various features, and developed RESTful APIs using FastAPI. Used Pandas for data manipulation and analysis, deployed the solution on Google Cloud Platform, built workflows with Zapier and Microsoft Power Automate, and onboarded new team members.",
+    stack: [
+      { id: "icon-1", icon: SiPython, name: "Python" },
+      { id: "icon-2", icon: SiFastapi, name: "FastAPI" },
+      { id: "icon-3", icon: SiPandas, name: "Pandas" },
+      { id: "icon-4", icon: SiGooglegemini, name: "Gemini API" },
+      { id: "icon-5", icon: SiGooglecloud, name: "GCP" },
+      { id: "icon-6", icon: SiZapier, name: "Zapier" },
+      { id: "icon-7", icon: SiPowers, name: "Power Automate" },
+    ],
+  },
+  {
+    id: "project-3",
+    title: "Kayak - the Gatherer",
+    github: "",
+    link: "",
+    image: arbisoft,
+    content:
+      "QA dashboard with auto release notes & JIRA tickets (May 2023 - Nov 2023). Developed internal solutions to optimize workflows, created a real-time Quality Dashboard for monitoring metrics, automated release notes generation and JIRA ticket creation, integrated Slack notifications, and implemented a Pytest pipeline on Azure DevOps for end-to-end testing.",
+    stack: [
+      { id: "icon-1", icon: SiPython, name: "Python" },
+      { id: "icon-2", icon: SiJira, name: "JIRA API" },
+      { id: "icon-3", icon: SiSlack, name: "Slack API" },
+      { id: "icon-4", icon: SiBamboo, name: "Atlassian Bamboo" },
+      { id: "icon-5", icon: VscAzure, name: "Microsoft Azure" },
+      { id: "icon-6", icon: VscAzureDevops, name: "Azure DevOps" },
+    ],
+  },
+  {
+    id: "project-4",
+    title: "Capital-Bee (FinTech)",
+    github: "",
+    link: "",
+    image: emumba,
+    content:
+      "SaaS-based solution that automates tax filing (Mar 2022 - Apr 2023). Built scalable fintech portal backend systems using Django REST Framework, integrated crypto wallets and automated data ingestion via Airflow and APIs, maintained API documentation for frontend collaboration, and deployed backend services to AWS for secure, scalable production.",
+    stack: [
+      { id: "icon-1", icon: SiPython, name: "Python" },
+      { id: "icon-2", icon: SiDjango, name: "Django REST Framework" },
+      { id: "icon-3", icon: SiPostgresql, name: "PostgreSQL" },
+      { id: "icon-4", icon: SiApacheairflow, name: "Airflow" },
+      { id: "icon-5", icon: SiGitlab, name: "GitLab" },
+      { id: "icon-6", icon: SiAmazon, name: "AWS" },
+    ],
+  },
+  {
+    id: "project-5",
+    title: "Text To Speech Engine",
+    github: "",
+    link: "",
+    image: afiniti,
+    content:
+      "TTS engine with multiple voices and languages (Apr 2021 - Jan 2022). Developed APIs for the TTS engine using FastAPI, integrated well-trained models with the REST server, maintained the existing engine and fixed bugs, and guided junior/new team members.",
+    stack: [
+      { id: "icon-1", icon: SiPython, name: "Python" },
+      { id: "icon-2", icon: SiFastapi, name: "FastAPI" },
+      { id: "icon-3", icon: SiDjango, name: "Django" },
+      { id: "icon-4", icon: SiPostgresql, name: "PostgreSQL" },
+      { id: "icon-5", icon: SiGit, name: "Git" },
+    ],
+  },
+  {
+    id: "project-6",
+    title: "OWLSENSE",
+    github: "",
+    link: "",
+    image: rapidev_logo,
+    content:
+      "OSINT-driven data platform (Nov 2019 - Apr 2021). Led the distributed web crawling architecture for large-scale data ingestion. Built microservices using Flask, Celery, and RabbitMQ, web crawlers using Scrapy and Selenium, and a crawler management dashboard using Django REST Framework. Implemented anti-scraping and reverse engineering techniques and owned end-to-end feature delivery, from requirements to deployment.",
+    stack: [
+      { id: "icon-1", icon: SiDjango, name: "Django REST Framework" },
+      { id: "icon-2", icon: SiFlask, name: "Flask" },
+      { id: "icon-3", icon: SiCelery, name: "Celery" },
+      { id: "icon-4", icon: SiRabbitmq, name: "RabbitMQ" },
+      { id: "icon-5", icon: SiScrapy, name: "Scrapy" },
+      { id: "icon-6", icon: SiSelenium, name: "Selenium" },
+    ],
+  },
 ];
 
 // Add links to blogs here
@@ -1128,9 +943,9 @@ export const aboutMe = {
   name: "Tanveer Ahmad",
   githubUsername: "tasaqi",
   tagLine:
-    "Software & Data Engineer | Building Scalable Systems with Python, Django, Flask, FastAPI | Cloud-Native with Azure & AWS | Real-Time Data with Kafka, Airflow.",
+    "Principal Software Engineer | Backend, AI Integration & Automation | Python, FastAPI, Django | LLMs with OpenAI, Gemini & LiveKit | Cloud on GCP, Azure & AWS.",
   intro:
-    "I'm a Software & Data Engineer with over 6 years of experience building scalable web applications and data pipelines. ",
+    "I'm a Principal Software Engineer with nearly 7 years of experience building scalable backend systems, data pipelines, and AI-driven solutions with Python, FastAPI, and Django.",
 };
 
 // The maximum number of PRs to be displayed in the Open Source Contributions section.
