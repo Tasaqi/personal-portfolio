@@ -28,7 +28,7 @@ const Project = (props) => {
             Tech Stack
           </p>
           <div className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
-            <div className="flex sm:flex-row">
+            <div className="flex flex-wrap gap-y-3 sm:flex-row">
               {props.stack.map((tech, index) => (
                 <div
                   key={tech.id}

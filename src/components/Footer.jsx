@@ -1,66 +1,62 @@
 import React from "react";
-import Button from "./Button";
+import ResumeButton from "./ResumeButton";
 import { socialMedia, aboutMe } from "../constants";
 import { profilePic } from "../assets";
-import { layout } from "../style";
-import { resumeLink, repoLink } from "../constants";
-import { AiFillGithub } from "react-icons/ai";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
-    <div
-      className={`${layout.sectionReverse} xl:max-w-[1280px] w-full mx-auto gap-y-4 `}
-    >
-      <div className={` ${layout.sectionInfo}`}>
-        <h2 className="text-xl font-bold text-gray-800 font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          {aboutMe.name}
-        </h2>
-        <p
-          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
-        >
-        {aboutMe.tagLine}
-        </p>
-        <div className="flex flex-row mt-4">
+    <div className="flex md:flex-row flex-col md:items-center md:justify-between gap-6 xl:max-w-[1280px] w-full mx-auto py-8">
+      <div className="flex sm:flex-row flex-col sm:items-center gap-5">
+        <img
+          src={profilePic}
+          alt={aboutMe.name}
+          className="w-[156px] h-[156px] flex-shrink-0 border-2 border-teal-200 rounded-full"
+        />
+        <div>
+          <h2 className="font-poppins font-semibold text-[24px] leading-[32px] text-gradient">
+            {aboutMe.name}
+          </h2>
+          <p className="font-poppins font-medium text-white text-[16px] leading-[24px]">
+            {aboutMe.tagLine.split(" | ")[0]}
+          </p>
+          <p className="font-poppins text-dimWhite text-[14px] leading-[24px] mt-1 max-w-[600px]">
+            {aboutMe.tagLine
+              .replace(/\.$/, "")
+              .split(" | ")
+              .slice(1)
+              .map((phrase, index, phrases) => (
+                <React.Fragment key={phrase}>
+                  <span className="whitespace-nowrap">
+                    {phrase}
+                    {index < phrases.length - 1 && (
+                      <span className="text-teal-200 mx-2">·</span>
+                    )}
+                  </span>{" "}
+                </React.Fragment>
+              ))}
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:items-center items-start gap-4 flex-shrink-0">
+        <ResumeButton />
+        <div className="flex flex-row">
           {socialMedia.map((social, index) => (
             <a
               href={social.link}
               target="_blank"
               key={social.id}
               index={index}
-              className="text-white mr-5 text-[25px] hover:text-teal-200"
+              className="text-white mr-5 last:mr-0 text-[22px] hover:text-teal-200"
             >
               {React.createElement(social.icon)}
             </a>
           ))}
         </div>
-
-        <div className="grid grid-cols-2">
-          {/* styles is a prop */}
-          <a href={resumeLink} target="_blank">
-            <Button styles="mt-10 mr-3 inline-flex items-center justify-center" text="Resume" icon={AiFillGithub} />
-          </a>
-          <a href={repoLink} target="_blank">
-            <Button
-              styles="mt-10 inline-flex items-center justify-center"
-              text="Star"
-              icon={AiFillGithub}
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="md:ml-auto mt-10 md:mt-0">
-        <img
-          src={profilePic}
-          alt="Tanveer Ahmad"
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
-        />
       </div>
     </div>
-    <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
-      <p>
-        Power by Tanveer Ahmad 
-      </p>
+    <div className="xl:max-w-[1280px] w-full mx-auto border-t border-gray-800 py-4 text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm">
+      <p>Powered by Tanveer Ahmad</p>
     </div>
   </footer>
 );

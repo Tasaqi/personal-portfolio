@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { close, parthmittal, menu } from "../assets";
 import { navLinks } from "../constants";
+import ResumeButton from "./ResumeButton";
 import { scrollToSection } from "../lib/helperFunctions";
 import { motion } from "framer-motion";
 
@@ -55,10 +56,14 @@ const Navbar = () => {
             {nav.title}
           </li>
         ))}
+        <li className="ml-10">
+          <ResumeButton />
+        </li>
       </ul>
 
       {/* only for mobile devices, created separately */}
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center gap-5">
+        <ResumeButton compact />
         {/* shows toggle icon based on its state */}
         <img
           src={toggle ? close : menu}
